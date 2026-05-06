@@ -57,7 +57,7 @@ static size_t writeCB(void* ptr, size_t size, size_t nmemb, std::string* out) {
     return size * nmemb;
 }
 
-// Sends an HTTP GET request to the  URL and returns the response
+// Sends an GET request to the  URL and returns the response
 std::string httpGet(const std::string& url) {
     CURL* curl = curl_easy_init();
     std::string resp;
@@ -71,7 +71,7 @@ std::string httpGet(const std::string& url) {
     return resp;
 }
 
-// Sends an HTTP PUT request to the URL and returns the response
+// Sends an PUT request to the URL and returns the response
 std::string httpPut(const std::string& url) {
     CURL* curl = curl_easy_init();
     std::string resp;
@@ -118,7 +118,7 @@ std::string trim(const std::string& s) {
     return s.substr(a, b - a + 1);
 }
 
-// Splits a string into smaller pieces using given delimiter
+// Splits a string into smaller pieces using delimiter
 std::vector<std::string> splitOn(const std::string& s, char delim) {
     std::vector<std::string> out;
     std::istringstream ss(s);
